@@ -1,0 +1,69 @@
+@import "./normalize.css";
+
+/*:root -> 获取根元素html*/
+:root {
+  --color-text: #666;
+  --color-high-text: #ff5777;
+  --color-tint: #ff8198;
+  --color-background: #fff;
+  --font-size: 14px;
+  --line-height: 1.5;
+}
+
+/* 在元素内容的最前面添加新内容 */
+/* 在元素内容的最后面添加新内容 */
+/* 为了自适应，宽度width采用的是百分比%的形式，border，padding，margin采用的是px尺寸，所有外层的盒子运用了box-sizing:border-box;属性来改变盒子的结构 */
+/* width=content+padding+border */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* "Helvetica Neue", "Helvetica"为mac os下的西文字体 */
+  /* "PingFang SC"，"Hiragino Sans GB",为mac os下的中文字体 */
+  /* "Microsoft YaHei"为windows下的中文字体 */
+  /* 当所有的字体都找不到时，我们可以使用字体族名称作为操作系统最后选择字体的方向。一般非衬线字体在显示器中的显示效果会比较好，因此我们需要在最后添加 sans-serif */
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  user-select: none; /* 禁止用户鼠标在页面上选中文字/图片等 */
+  -webkit-tap-highlight-color: transparent; /* webkit是苹果浏览器引擎，tap点击，highlight背景高亮，color颜色，颜色用数值调节 */
+  background: var(--color-background);
+  color: var(--color-text);
+  /* rem vw/vh */
+  /* vw和vh相对的当前浏览器的视口 ，例如当前视口尺寸为375px 那么100vw = 375px，与父元素的大小无关 */
+  width: 100vw;
+}
+
+a {
+  color: var(--color-text);
+  /* 文本没有下划线 */
+  text-decoration: none;
+}
+
+
+.clear-fix::after {
+  clear: both;
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  /* 使用该属性后，HTML元素（对象）仅仅是在视觉上看不见（完全透明），而它所占据的空间位置仍然存在 */
+  visibility: hidden;
+}
+
+/* IE6-7下，清除浮动::after伪元素无法使用 */
+.clear-fix {
+  zoom: 1;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
