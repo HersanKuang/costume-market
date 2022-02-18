@@ -18,7 +18,19 @@
         default() {
           return []
         }
-      }
+      },
+      // subcategories: {
+      //   type: Object,
+      //   default() {
+      //     return {}
+      //   }
+      // },
+      // categoryDetail: {
+      //   type: Array,
+      //   default() {
+      //     return []
+      //   }
+      // }
     },
     data() {
       return {

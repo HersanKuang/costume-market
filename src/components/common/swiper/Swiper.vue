@@ -1,5 +1,5 @@
 <template>
-    <div id="hy-swiper">
+    <div id="hx-swiper">
       <div class="swiper" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd">
         <slot></slot>
       </div>
@@ -210,7 +210,7 @@
 </script>
 
 <style>
-  #hy-swiper {
+  #hx-swiper {
     overflow: hidden;
     position: relative;
   }

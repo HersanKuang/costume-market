@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export function requestHomeMultidata(config) {
+export function request1(config) {
   // 1.创建axios实例(instance)
   const instance = axios.create({
     baseURL: 'http://123.207.32.32:8000',
@@ -32,7 +32,7 @@ export function requestHomeMultidata(config) {
 // 
 // 
 // 
-export function requestHomegoods(config) {
+export function request2(config) {
   // 1.创建axios实例(instance)
   const instance = axios.create({
     baseURL: 'http://152.136.185.210:7878/api/hy66',

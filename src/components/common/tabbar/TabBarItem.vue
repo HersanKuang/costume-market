@@ -16,11 +16,6 @@ export default {
       default: 'red'
     }
   },
-  data() {
-    return {
-      // isActive: true,
-    }
-  },
   computed: {
     isActive() {
       // /home -> item1(/home) = true

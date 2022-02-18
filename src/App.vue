@@ -1,7 +1,11 @@
 <template>
- <div id="app">
-   <router-view/>
-   <main-tab-bar/>
+  <div id="app">
+    <router-view v-slot="{ Component }">
+      <keep-alive exclude="Detail">
+        <component :is="Component" />
+      </keep-alive>
+    </router-view>
+    <main-tab-bar/>
   </div>
 </template>
 
@@ -12,16 +16,10 @@ export default {
   name: "app",
   components: {
     MainTabBar
-  },
-  data() {
-    return {
-    }
-  },
-  methods: {
   }
 }
 
 </script>
 <style>
-@import 'assets/css/base.css';
+  @import 'assets/css/base.css';
 </style>
