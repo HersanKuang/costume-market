@@ -1,4 +1,4 @@
-# clothingstore
+# ClothingStore
 
 ## Project setup
 ```
