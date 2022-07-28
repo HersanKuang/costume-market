@@ -1,14 +1,13 @@
 <template>
   <div class="param-info" v-if="Object.keys(paramInfo).length !== 0">
-    <table v-for="(table, index) in paramInfo.sizes"
-           class="info-size"
-           :key="index">
+    <table v-for="table in paramInfo.sizes"
+           class="info-size">
       <tr v-for="tr in table">
         <td v-for="td in tr">{{td}}</td>
       </tr>
     </table>
     <table class="info-param">
-      <tr v-for="(info, index) in paramInfo.infos" :key="index">
+      <tr v-for="info in paramInfo.infos">
         <td class="info-param-key">{{info.key}}</td>
         <td class="param-value">{{info.value}}</td>
       </tr>

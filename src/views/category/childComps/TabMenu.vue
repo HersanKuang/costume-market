@@ -4,8 +4,7 @@
       <div class="menu-list-item"
            :class="{active: index===currentIndex}"
            v-for="(item, index) in categories"
-           @click="itemClick(index)"
-           :key="index">
+           @click="itemClick(index)">
         {{item.title}}
       </div>
     </div>
