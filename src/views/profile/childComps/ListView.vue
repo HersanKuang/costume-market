@@ -1,6 +1,6 @@
 <template>
     <div id="list">
-      <div v-for="item in listData" class="item">
+      <div v-for="(item, index) in listData" class="item" :key="index">
         <span class="icon">
           <!-- <svg :fill="item.iconColor"><use :xlink:href="item.icon"></use></svg> -->
           <img :src="item.path" alt="">
