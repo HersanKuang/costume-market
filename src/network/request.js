@@ -27,15 +27,11 @@ export function request1(config) {
   // 3.发送真正的网络请求
   return instance(config)
 }
-// 
-// 
-// 
-// 
-// 
+
 export function request2(config) {
   // 1.创建axios实例(instance)
   const instance = axios.create({
-    baseURL: 'http://152.136.185.210:7878/api/hy66',
+    baseURL: 'http://123.207.32.32:7888/api/hy66',
     timeout: 5000
   })
 
